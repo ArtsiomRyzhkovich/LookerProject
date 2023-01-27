@@ -25,6 +25,18 @@ view: d_dates {
     sql: ${TABLE}."DATE_VAL" ;;
   }
 
+  dimension_group: date_of {
+    type: time
+    timeframes: [
+      day_of_week,
+      day_of_month,
+      day_of_year
+    ]
+    convert_tz: no
+    datatype: date
+    sql: ${TABLE}."DATE_VAL" ;;
+  }
+
 
   dimension: day_of_week {
     type: number

@@ -27,12 +27,12 @@ view: d_customer {
 
   dimension: c_nation {
     type: string
-    sql: ${TABLE}."C_NATION" ;;
+    sql: upper(${TABLE}."C_NATION") ;;
   }
 
   dimension: c_phone {
     type: string
-    sql: ${TABLE}."C_PHONE" ;;
+    sql: '+' & ${TABLE}."C_PHONE" ;; # concat test
   }
 
   dimension: c_region {
