@@ -128,21 +128,21 @@ view: f_lineitems {
 
 #custom measures
   measure: total_sales_price{
-    view_label: "Total Sales Price"
+    label: "Total Sales Price"
     type: sum
     sql: ${l_totalprice} ;;
     value_format_name: "usd"
   }
 
   measure: avg_sales_price{
-    view_label: "Average Sales Price"
+    label: "Average Sales Price"
     type: average
     sql: ${l_totalprice} ;;
     value_format_name: "usd"
   }
 
   measure: cumulative_total_sales {
-    view_label: "Cumulative Total Sales"
+    label: "Cumulative Total Sales"
     type: sum
     sql: running_total(${l_totalprice}) ;;
     value_format_name: "usd"
