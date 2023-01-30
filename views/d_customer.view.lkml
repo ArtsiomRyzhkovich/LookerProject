@@ -32,7 +32,7 @@ view: d_customer {
 
   dimension: c_phone {
     type: string
-    sql: '+' & ${TABLE}."C_PHONE" ;; # concat test
+    sql: '+' || ${TABLE}."C_PHONE" ;; # concat test
   }
 
   dimension: c_region {
