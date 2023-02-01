@@ -38,10 +38,16 @@ view: d_supplier {
     sql: ${TABLE}."S_REGION" ;;
   }
 
-
+set: supplier_detail {
+  fields: [s_region,
+           s_nation,
+           s_name,
+           s_phone
+            ]
+}
 
   measure: count {
     type: count
-    drill_fields: [s_name]
+    drill_fields: [supplier_detail*]
   }
 }
