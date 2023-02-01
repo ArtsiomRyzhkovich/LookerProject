@@ -42,6 +42,6 @@ view: d_customer {
 
   measure: count {
     type: count
-    drill_fields: [c_name]
+    drill_fields: [c_region, c_address, c_name]
   }
 }
