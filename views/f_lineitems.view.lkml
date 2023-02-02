@@ -144,4 +144,13 @@ view: f_lineitems {
     sql: running_total(${l_totalprice}) ;;
     value_format_name: "usd"
   }
+
+  measure: total_russia_sales{
+    type: sum
+    filters: [d_customer.c_nation: "RUSSIA"]
+    sql: $(${l_totalprice} ;;
+
+    value_format_name: "usd"
+  }
+
 }
