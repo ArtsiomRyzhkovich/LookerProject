@@ -159,7 +159,12 @@ view: f_lineitems {
     value_format_name: "usd"
   }
 
-
+  measure: total_gross_revenue {
+    description: "F-Fulfilled"
+    type: sum
+    filters: [l_orderstatus: "F"] #Fulfilled???
+    sql: $(${l_totalprice} ;;
+  }
 
 
 }
