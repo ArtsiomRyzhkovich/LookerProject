@@ -145,12 +145,21 @@ view: f_lineitems {
     value_format_name: "usd"
   }
 
+  measure: total_sales_shiped_by_air{
+    type: sum
+    filters: [l_shipmode: "AIR, REG AIR"]
+    sql: ${l_totalprice} ;;
+  }
+
   measure: total_russia_sales{
     type: sum
     filters: [d_customer.c_nation: "RUSSIA"]
-    sql: $(${l_totalprice} ;;
+    sql: ${l_totalprice} ;;
 
     value_format_name: "usd"
   }
+
+
+
 
 }

@@ -38,6 +38,13 @@ view: d_supplier {
     sql: ${TABLE}."S_REGION" ;;
   }
 
+  dimension: cohort_account_balance{
+    type: tier
+    tiers: [0, 1, 3001, 5001, 7001]
+    style: integer
+    sql: ${s_acctbal} ;;
+  }
+
 set: supplier_detail {
   fields: [s_region,
            s_nation,
@@ -50,4 +57,5 @@ set: supplier_detail {
     type: count
     drill_fields: [supplier_detail*]
   }
+
 }
