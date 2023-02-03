@@ -175,4 +175,10 @@ view: f_lineitems {
     type: number
     sql: ${total_gross_revenue} - ${total_cost};;
   }
+
+  measure: gross_margin_percentage {
+    type: number
+    value_format_name: percent_2
+    sql: ${total_gross_margin_amount} / NULLIF(${total_gross_revenue}, 0);;
+  }
 }
