@@ -189,5 +189,15 @@ view: f_lineitems {
     sql: ${l_quantity} ;;
   }
 
+  measure: total_number_of_items_sold {
+    type:sum
+    sql: ${l_quantity} ;;
+  }
+
+  measure: item_return_rate {
+    type: number
+    value_format_name: percent_2
+    sql: ${number_of_items_returned} / NULLIF(${total_number_of_items_sold}, 0)  ;;
+  }
 
 }
