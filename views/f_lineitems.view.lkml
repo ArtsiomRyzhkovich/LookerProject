@@ -200,4 +200,9 @@ view: f_lineitems {
     sql: ${number_of_items_returned} / NULLIF(${total_number_of_items_sold}, 0)  ;;
   }
 
+  measure: average_spend_per_customer {
+    type: number
+
+    sql: ${total_sales_price} / NULLIF(${d_customer.count}, 0)  ;;
+  }
 }
