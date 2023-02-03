@@ -170,4 +170,9 @@ view: f_lineitems {
     type:  sum
     sql: ${l_supplycost} ;;
   }
+
+  measure: total_gross_margin_amount {
+    type: number
+    sql: ${total_gross_revenue} - ${total_cost};;
+  }
 }
