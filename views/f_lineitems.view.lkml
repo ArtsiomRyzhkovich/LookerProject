@@ -163,8 +163,11 @@ view: f_lineitems {
     description: "F-Fulfilled"
     type: sum
     filters: [l_orderstatus: "F"] #Fulfilled???
-    sql: $(${l_totalprice} ;;
+    sql: ${l_totalprice} ;;
   }
 
-
+  measure: total_cost {
+    type:  sum
+    sql: ${l_supplycost} ;;
+  }
 }
