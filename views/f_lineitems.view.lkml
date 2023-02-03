@@ -181,4 +181,11 @@ view: f_lineitems {
     value_format_name: percent_2
     sql: ${total_gross_margin_amount} / NULLIF(${total_gross_revenue}, 0);;
   }
+
+
+  measure: number_of_items_returned {
+    type:count_distinct
+    filters: [l_returnflag: "R"]
+    sql: ${l_linenumber} ;;
+  }
 }
