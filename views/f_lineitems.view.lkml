@@ -184,8 +184,10 @@ view: f_lineitems {
 
 
   measure: number_of_items_returned {
-    type:count_distinct
+    type:sum
     filters: [l_returnflag: "R"]
-    sql: ${l_linenumber} ;;
+    sql: ${l_quantity} ;;
   }
+
+
 }
