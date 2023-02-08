@@ -205,4 +205,10 @@ view: f_lineitems {
 
     sql: ${total_sales_price} / NULLIF(${d_customer.count}, 0)  ;;
   }
+
+  # • Total Number of orders for 1 Jan 1995
+  measure: total_number_of_order {
+    type: count_distinct
+    sql: ${l_orderkey} ;;
+  }
 }
