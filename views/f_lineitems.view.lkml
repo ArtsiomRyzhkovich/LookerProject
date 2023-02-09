@@ -174,7 +174,9 @@ view: f_lineitems {
   measure: total_gross_margin_amount {
     type: number
     sql: ${total_gross_revenue} - ${total_cost};;
+    drill_fields: [l_shipmode, d_supplier.supplier_detail*,  total_gross_margin_amount]
   }
+
 
   measure: gross_margin_percentage {
     type: number
