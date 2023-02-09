@@ -213,4 +213,9 @@ view: f_lineitems {
     type: count_distinct
     sql: ${l_orderkey} ;;
   }
+
+  measure:  number_of_sales{
+    type: count_distinct
+    sql: ${l_totalprice} ;;
+  }
 }
