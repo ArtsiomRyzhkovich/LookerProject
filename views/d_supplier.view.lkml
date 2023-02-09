@@ -47,9 +47,7 @@ view: d_supplier {
 
 set: supplier_detail {
   fields: [s_region,
-           s_nation,
-           s_name,
-           s_phone
+           cohort_account_balance
             ]
 }
 
