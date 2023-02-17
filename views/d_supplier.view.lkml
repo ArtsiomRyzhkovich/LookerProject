@@ -19,8 +19,15 @@ view: d_supplier {
   }
 
   dimension: s_name {
+    label: "Supplier Name"
+    description: "Supplier name"
     type: string
+    link: {
+      label: "Link to the supplier"
+      url: "https://www.google.com/search?q={{d_supplier.s_name._value}}"
+      icon_url:"https://cdn-icons-png.flaticon.com/512/4866/4866608.png"}
     sql: ${TABLE}."S_NAME" ;;
+
   }
 
   dimension: s_nation {
