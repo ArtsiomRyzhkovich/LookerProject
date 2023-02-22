@@ -50,6 +50,6 @@ view: d_customer {
   dimension: customer_name {
     type: string
     sql: ${c_name} ;;
-    html: <a href="https://www.google.com/">{{ value }}</a> ;;
+    html: <a href="https://www.google.com/search?q={{value}}">{{ value }}</a> ;;
   }
 }
