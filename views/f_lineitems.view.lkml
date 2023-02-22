@@ -232,4 +232,18 @@ view: f_lineitems {
     html: <font color="purple">{{rendered_value}}</font>  ;;
     }
 
+  measure: sales_price_html_if{
+    type: sum
+    sql: ${l_totalprice} ;;
+    value_format_name: "usd"
+
+    html: {% if value >= 10000000 %}
+    <font color="red">{{rendered_value}}</font>
+    {% elsif value >= 5000000 and value < 10000000 %}
+    <font color="goldenrod">{{rendered_value}}</font>
+    {% else %}
+    <font color="green">{{rendered_value}}</font>
+    {% endif %}
+    ;;
+  }
 }
