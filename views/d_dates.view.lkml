@@ -97,7 +97,7 @@ view: d_dates {
 
   dimension: dynamic_date_filter {
       description: "Please choose needed Date Format"
-      type: string
+      type: number
       label_from_parameter: year_quarter_month_test
       sql: {% parameter year_quarter_month_test %}(${date_value}) ;;
     }
