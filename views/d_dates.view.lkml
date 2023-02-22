@@ -82,15 +82,15 @@ view: d_dates {
     description:"Choose needed date parameter"
     type: unquoted
     allowed_value: {
-      label:"Month Name"
+      label:"_Month"
       value: "MONTH_NAME"
     }
     allowed_value: {
-      label:"Quarter"
+      label:"_Quarter"
       value:"QUARTER"
     }
     allowed_value: {
-      label:"Year"
+      label:"_Year"
       value:"YEAR"
     }
   }
