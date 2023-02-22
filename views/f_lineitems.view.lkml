@@ -219,10 +219,10 @@ view: f_lineitems {
     sql: ${l_totalprice} ;;
   }
 #Liquid test
-  dimension: priority_colors  {
+  dimension: order_status_html  {
     type: number
-    sql: ${l_shippriority} ;;
-    html: <b><right><font size="5" color="#2a9d8f" >{{value}}</font></right></b> ;;
+    sql: ${l_orderstatus} ;;
+    html: <b><center><font size="5" color="#2a9d8f" >{{value}}</font></center></b> ;;
   }
 
 }
