@@ -245,4 +245,33 @@ view: f_lineitems {
     {% endif %}
     ;;
   }
+  parameter: sales_type_param {
+    description:"Choose needed sales type"
+    type: unquoted
+    allowed_value: {
+      label:"SUM"
+      value: "SUM"
+    }
+    allowed_value: {
+      label:"AVG"
+      value:"AVG"
+    }
+    allowed_value: {
+      label:"MAX"
+      value:"MAX"
+    }
+  }
+
+
+#custom measures
+  measure: dynamic_sales_type{
+   description: "Use with the Sale Price Metric Picker filter-only field"
+
+    type: number
+    label_from_parameter: sales_type_param
+    sql: {% parameter sales_type_param %}(${total_sales_price}) ;;
+    value_format_name: usd
+
+  }
+
 }
