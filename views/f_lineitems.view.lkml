@@ -234,11 +234,12 @@ view: f_lineitems {
 
   measure: returned_items_if{
     type: number
-    sql: ${number_of_items_returned} ;;
+    label: "Returned Items Rate"
+    sql: ${item_return_rate} ;;
 
-    html: {% if value >= 10000000 %}
+    html: {% if value >= 50 %}
     <font color="red">{{rendered_value}}</font>
-    {% elsif value >= 5000000 and value < 10000000 %}
+    {% elsif value >= 30 and value < 50 %}
     <font color="goldenrod">{{rendered_value}}</font>
     {% else %}
     <font color="green">{{rendered_value}}</font>
