@@ -83,7 +83,7 @@ view: d_dates {
     type: unquoted
     allowed_value: {
       label:"Month Name"
-      value: "%B"
+      value: "MONTH_NAME"
     }
     allowed_value: {
       label:"Quarter"
