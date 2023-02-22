@@ -72,4 +72,34 @@ view: d_dates {
     type: count
     drill_fields: [month_name]
   }
+
+  dimension: date_value {
+    datatype: date
+    sql: ${TABLE}."DATE_VAL" ;;
+  }
+
+  parameter: year_quarter_month_test {
+    description:"Choose needed date parameter"
+    type: unquoted
+    allowed_value: {
+      label:"_Month"
+      value: "MONTH_NAME"
+    }
+    allowed_value: {
+      label:"_Quarter"
+      value:"QUARTER"
+    }
+    allowed_value: {
+      label:"_Year"
+      value:"YEAR"
+    }
+  }
+
+  dimension: dynamic_date_filter {
+      description: "Please choose needed Date Format"
+      type: string
+      label_from_parameter: year_quarter_month_test
+      sql: {% parameter year_quarter_month_test %}(${date_value}) ;;
+    }
+
 }
