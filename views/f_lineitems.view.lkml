@@ -218,6 +218,11 @@ view: f_lineitems {
     type: count_distinct
     sql: ${l_totalprice} ;;
   }
-
+#Liquid test
+  dimension: priority_colors  {
+    type: number
+    sql: ${l_shippriority} ;;
+    html: <b><right><font size="5" color="#2a9d8f" >{{value}}</font></right></b> ;;
+  }
 
 }
