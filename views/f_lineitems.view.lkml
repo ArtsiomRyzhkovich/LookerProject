@@ -225,4 +225,10 @@ view: f_lineitems {
     html: <b><center><font size="5" color="#2a9d8f" >{{value}}</font></center></b> ;;
   }
 
+  measure:  total_orders_count_html{
+    type: count_distinct
+    sql: ${l_orderkey} ;;
+    html: <font color="purple">{{rendered_value}}</font>  ;;
+    }
+
 }
