@@ -232,9 +232,9 @@ view: f_lineitems {
     html: <font color="purple">{{rendered_value}}</font>  ;;
     }
 
-  measure: sales_price_html_if{
-    type: sum
-    sql: ${l_totalprice} ;;
+  measure: returned_items_if{
+    type: number
+    sql: ${number_of_items_returned} ;;
     value_format_name: "usd"
 
     html: {% if value >= 10000000 %}
