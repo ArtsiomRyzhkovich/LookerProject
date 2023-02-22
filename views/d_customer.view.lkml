@@ -20,6 +20,7 @@ view: d_customer {
     sql: ${TABLE}."C_MKTSEGMENT" ;;
   }
 
+
   dimension: c_name {
     type: string
     sql: ${TABLE}."C_NAME" ;;
@@ -43,5 +44,12 @@ view: d_customer {
   measure: count {
     type: count
     drill_fields: [c_region, c_address, c_name]
+  }
+
+  #Liquid Hyperlink
+  dimension: customer_name {
+    type: string
+    sql: ${c_name} ;;
+    html: <a href="https://www.google.com/">{{ value }}</a> ;;
   }
 }

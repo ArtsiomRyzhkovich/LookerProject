@@ -235,7 +235,6 @@ view: f_lineitems {
   measure: returned_items_if{
     type: number
     sql: ${number_of_items_returned} ;;
-    value_format_name: "usd"
 
     html: {% if value >= 10000000 %}
     <font color="red">{{rendered_value}}</font>
