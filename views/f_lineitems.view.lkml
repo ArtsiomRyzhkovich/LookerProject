@@ -236,7 +236,7 @@ view: f_lineitems {
     type: number
     label: "Returned Items Rate"
     sql: ${item_return_rate} ;;
-
+    value_format_name: percent_2
     html: {% if value >= 0.5 %}
     <font color="red">{{rendered_value}}</font>
     {% elsif value >= 0.3 and value < 0.5 %}
