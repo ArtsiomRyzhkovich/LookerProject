@@ -39,6 +39,7 @@ view: d_customer {
   dimension: c_region {
     type: string
     sql: ${TABLE}."C_REGION" ;;
+    html: <a href="/dashboards/266">{{ value }}</a> ;;
   }
 
   measure: count {
