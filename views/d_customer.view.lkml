@@ -42,8 +42,8 @@ view: d_customer {
     #html: <a href="/dashboards/266">{{ value }}</a> ;;
     link: {
       label: "Summary Dashboard Target by Artsiom Ryzhkovich"
-      url: "dashboards/266?Customer+Nation=&Year+Quarter+Month+Test=Month&Customer+Region= {{ value | url_encode }}"
-    }
+      url: "dashboards/266?Customer+Nation=&Year+Quarter+Month+Test=Month&Customer+Region={{ value | url_encode }}"
+    }                 # 266?Customer+Nation=&Year+Quarter+Month+Test=Month&Customer+Region=
   }
 
   measure: count {
