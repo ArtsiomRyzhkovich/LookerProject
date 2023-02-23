@@ -42,8 +42,7 @@ view: d_customer {
     #html: <a href="/dashboards/266">{{ value }}</a> ;;
     link: {
       label: "Summary Dashboard Target by Artsiom Ryzhkovich"
-      url: "/dashboards/266?Customer+Region={{ value | url_encode }}&Year+Quarter+Month+Test={{
-      _filters['d_dates.year_quarter_month_test'] | url_encode }}"
+      url: "/dashboards/266?Customer+Region={{ value | url_encode }}&&Customer+Nation=&Year+Quarter+Month+Test="
     }
   }
 
