@@ -39,7 +39,12 @@ view: d_customer {
   dimension: c_region {
     type: string
     sql: ${TABLE}."C_REGION" ;;
-    html: <a href="/dashboards/266">{{ value }}</a> ;;
+    #html: <a href="/dashboards/266">{{ value }}</a> ;;
+    link: {
+      label: "Summary Dashboard Target by Artsiom Ryzhkovich"
+      url: "/dashboards/266?Customer+Region={{ value | url_encode }}&Year+Quarter+Month+Test={{
+      _filters['d_dates.year_quarter_month_test'] | url_encode }}"
+    }
   }
 
   measure: count {
