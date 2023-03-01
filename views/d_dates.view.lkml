@@ -102,4 +102,16 @@ view: d_dates {
       sql: {% parameter year_quarter_month_test %}(${date_value}) ;;
     }
 
+  dimension: dynamic_chart_name {
+    label: "Chart Name"
+    label_from_parameter:year_quarter_month_test
+    type: string
+    sql:
+      {% if year_quarter_month_test._parameter_value == "Month" %} "Monthly"
+      {% elsif year_quarter_month_test._parameter_value == "Quarter" %} "Quarterly"
+      {% elsif year_quarter_month_test._parameter_value == "Year" %} "Yearly"
+      {% endif %}
+      ;;
+  }
+
 }
