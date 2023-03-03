@@ -107,9 +107,9 @@ view: d_dates {
     label_from_parameter:year_quarter_month_test
     type: string
     sql:
-      {% if year_quarter_month_test._parameter_value == "Month" %} 1
-      {% elsif year_quarter_month_test._parameter_value == "QUARTER" %} 2
-      {% elsif year_quarter_month_test._parameter_value == "YEAR" %} 3
+      {% if year_quarter_month_test._parameter_value == "Month" %} "Monthly"
+      {% elsif year_quarter_month_test._parameter_value == "QUARTER" %} "Quarterly"
+      {% elsif year_quarter_month_test._parameter_value == "YEAR" %} "Yearly"
       {% endif %}
       ;;
   }
