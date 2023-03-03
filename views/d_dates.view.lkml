@@ -108,8 +108,8 @@ view: d_dates {
     type: string
     sql:
       {% if year_quarter_month_test._parameter_value == "Month" %} 1
-      {% elsif year_quarter_month_test._parameter_value == "Quarter" %} 2
-      {% elsif year_quarter_month_test._parameter_value == "Year" %} 3
+      {% elsif year_quarter_month_test._parameter_value == "QUARTER" %} 2
+      {% elsif year_quarter_month_test._parameter_value == "YEAR" %} 3
       {% endif %}
       ;;
   }
